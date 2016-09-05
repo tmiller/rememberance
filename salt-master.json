@@ -1,4 +1,21 @@
 {
-  "builders": [ ],
-  "provisioners": [ ]
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "ami_name": "salt-master-{{timestamp}}",
+      "instance_type": "t2.micro",
+      "region": "us-east-1",
+      "source_ami": "ami-4f680658",
+      "ssh_username": "ubuntu",
+      "associate_public_ip_address": true,
+      "vpc_id": "vpc-da03e5be",
+      "subnet_id": "subnet-58cdbe73"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "salt-masterless",
+      "local_state_tree": "salt-master-state-tree"
+    }
+  ]
 }
