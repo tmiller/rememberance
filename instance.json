@@ -1,0 +1,9 @@
+{
+    "KeyName": "Tom Miller - Yubikey 2", 
+    "SecurityGroupIds": [
+        "sg-8fee67f5",
+        "sg-c7ee67bd"
+    ], 
+    "InstanceType": "t2.micro", 
+    "SubnetId": "subnet-dc783785"
+}
